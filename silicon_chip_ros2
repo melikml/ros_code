@@ -1,0 +1,98 @@
+Installation of ROS2 on MacOS(Silicon mac chips) steps:
+
+THESE TERMINAL INSTRUCTIONS WILL NOT WORK ON AN INTEL MAC
+
+
+1. Install Homebrew  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2. Install Conda
+3. Install Ros2 using Robostack
+4. install gazebo
+
+
+terminal steps:
+1-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2- write your mac password
+3-Click Return/enter
+4- It is going to say something like:
+==> Next steps:
+- Run these commands in your terminal to add Homebrew to your PATH:
+    echo >> /Users/meliksahyorulmazlar/.bash_profile
+    echo 'eval "$(/usr/local/bin/brew shellenv)"' >> /Users/meliksahyorulmazlar/.bash_profile
+    eval "$(/usr/local/bin/brew shellenv)"
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh
+
+
+so you should run those following commands it mentions
+
+on a silicon chip mac you will get 2 commands 
+
+5- write brew doctor to verify your installation
+
+6- download conda using:
+
+mkdir -p ~/miniconda3
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -0 ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh-b-u-p~/miniconda3
+rm-rf ~/miniconda3/miniconda.sh
+
+
+After installing, initialize your newly-installed Miniconda. The following commands initialize for bash and zsh shells:
+
+~/miniconda3/bin/conda init balt
+~/miniconda3/bin/conda init zsh
+
+7- once you have downloaded conda do the following:
+write clear to your terminal then:
+
+conda install mamba -c conda-forge
+
+type y
+
+conda create -n ros2
+
+type y
+
+conda activate ros2
+
+conda config --env --add channels conda-forge
+
+conda config --env --add channels robostack-staging
+
+conda config --env --remove channels defaults
+
+conda install ros-humble-desktop
+
+this will take a long time
+
+8- after the installations, these commands are required:
+
+conda install compilers cmake pkg-config make ninja colcon-common-extensions catkin_tools rosdep
+
+click y
+
+9- you can run rviz
+
+rviz2
+
+
+
+10- gazebo installation
+
+first you have to deactivate ros2
+conda deactivate ros2
+
+conda deactivate
+
+
+curl -ssL http://get.gazebosim.org | sh
+
+brew update
+
+brew doctor
+
+->this verifies your download
+
+gazebo
+
