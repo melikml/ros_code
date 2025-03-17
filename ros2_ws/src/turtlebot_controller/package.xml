@@ -1,1 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>turtlebot_controller</name>
+  <version>0.0.1</version>
+  <description>TurtleBot3 Teleop Node for controlling movement via keyboard</description>
+  <maintainer email="yorulk@rpi.edu">Meliksah Yorulmazlar</maintainer>
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
 
