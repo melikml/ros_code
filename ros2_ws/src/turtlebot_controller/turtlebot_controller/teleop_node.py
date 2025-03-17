@@ -11,3 +11,5 @@ KEY_MAPPINGS = {
     'd': (0, -0.5), #Turns right
     'x': (0, 0)     #this makes it stop
 }
+
+# Basically W makes the turtlebot go forward,S makes the turtlebot go backwards,A makes it turn left,D makes it turn right,X makes the bot sopt moving
