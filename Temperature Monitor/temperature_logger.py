@@ -1,3 +1,5 @@
+#This code/module logs all the actions and the alerts
+
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
