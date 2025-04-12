@@ -1,3 +1,5 @@
+#receives alerts and decides whether to heat/cool
+
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
