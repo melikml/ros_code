@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>smart_temperature_monitor</name>
+  <version>0.0.1</version>
+  <description>Simulates temperature monitoring and climate control in a smart environment using ROS 2.</description>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
