@@ -16,4 +16,15 @@ class TalkerNode(Node):
         self.publisher_.publish(msg)
         self.get_logger().info(f'Publishing: "{msg.data}"')
         self.count += 1
+def main(args=None):
+    rclpy.init(args=args)
+    node = TalkerNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    node.destroy_node()
+    rclpy.shutdown()
 
+if __name__ == '__main__':
+    main()
