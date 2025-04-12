@@ -4,7 +4,6 @@
   <version>0.0.0</version>
   <description>A ROS2 demo package with publisher, subscriber, service, client, and parameter nodes.</description>
 
-  <maintainer email="yorulk@rpi.edu">Meliksah Yorulmazlar</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_python</buildtool_depend>
